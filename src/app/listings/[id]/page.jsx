@@ -7,7 +7,7 @@ const boats = [
   { id: 4, name: "Andaman Snorkel Boat", price: 3499, location: "Havelock", description: "Snorkel the reefs in crystal clear waters." },
 ];
 
-export default function ListingDetails({ params }: { params: { id: string } }) {
+export default function ListingDetails({ params }) {
   const boat = boats.find(b => String(b.id) === params.id);
   if (!boat) return <div style={{ padding: 24 }} className="container">Not found</div>;
 

@@ -1,12 +1,10 @@
 "use client";
 
-export type BoatNowUser = { email: string; name?: string } | null;
-
-export function getCurrentUser(): BoatNowUser {
+export function getCurrentUser() {
   if (typeof window === "undefined") return null;
   try {
     const raw = localStorage.getItem("boatnow_user");
-    return raw ? (JSON.parse(raw) as BoatNowUser) : null;
+    return raw ? JSON.parse(raw) : null;
   } catch {
     return null;
   }

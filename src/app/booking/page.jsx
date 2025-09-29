@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { FormEvent, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { getCurrentUser } from "@/lib/auth";
 
 const boats = [
@@ -24,7 +24,7 @@ export default function BookingPage() {
   const [email, setEmail] = useState(user?.email ?? "");
   const [confirmed, setConfirmed] = useState(false);
 
-  function onSubmit(e: FormEvent) {
+  function onSubmit(e) {
     e.preventDefault();
     if (!email || !date || !hours) return;
     setConfirmed(true);
