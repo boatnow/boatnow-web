@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useMemo, useState } from "react";
-import { getCurrentUser } from "@/src/lib/auth";
+import { getCurrentUser } from "@/lib/auth";
 
 const boats = [
   { id: 1, name: "Goa Sunset Cruise", price: 2999 },
