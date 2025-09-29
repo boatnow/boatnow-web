@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { getCurrentUser } from "@/lib/auth";
 
 const boats = [
@@ -12,6 +12,14 @@ const boats = [
 ];
 
 export default function BookingPage() {
+  return (
+    <Suspense fallback={<div style={{ padding: 24 }} className="container">Loading…</div>}>
+      <BookingContent />
+    </Suspense>
+  );
+}
+
+function BookingContent() {
   const router = useRouter();
   const params = useSearchParams();
   const boatId = Number(params.get("boatId"));
