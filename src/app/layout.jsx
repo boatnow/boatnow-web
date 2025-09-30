@@ -13,8 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BoatNow — Boat Rentals in India",
-  description: "Book boats, yachts, and charters across India",
+  metadataBase: new URL("https://booknaav.com"),
+  title: {
+    default: "BookNaav — Boat Rentals in India",
+    template: "%s • BookNaav",
+  },
+  description: "Discover and book boats, houseboats, and yachts across India.",
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "BookNaav — Boat Rentals in India",
+    description: "Discover and book boats, houseboats, and yachts across India.",
+    siteName: "BookNaav",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BookNaav — Boat Rentals in India",
+    description: "Discover and book boats, houseboats, and yachts across India.",
+  },
 };
 
 export default function RootLayout({ children }) {
