@@ -25,11 +25,15 @@ export const metadata = {
     title: "BookNaav — Boat Rentals in India",
     description: "Discover and book boats, houseboats, and yachts across India.",
     siteName: "BookNaav",
+    images: [
+      { url: "/favicon.svg", width: 1200, height: 630, alt: "BookNaav" }
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BookNaav — Boat Rentals in India",
     description: "Discover and book boats, houseboats, and yachts across India.",
+    images: ["/favicon.svg"],
   },
 };
 
@@ -40,6 +44,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen flex flex-col">
+          <link rel="icon" href="/favicon.svg" sizes="any" />
           <nav className="navbar">
             <a href="/" style={{ fontSize: 20, fontWeight: 600 }}>
               BoatNow
