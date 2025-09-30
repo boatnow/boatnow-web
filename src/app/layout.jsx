@@ -46,8 +46,8 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen flex flex-col">
           <link rel="icon" href="/favicon.svg" sizes="any" />
           <nav className="navbar">
-            <a href="/" style={{ fontSize: 20, fontWeight: 600 }}>
-              BoatNow
+            <a href="/" style={{ display:'flex', alignItems:'center', gap:8 }}>
+              <img src="/logo.svg" alt="BookNaav" height={28} />
             </a>
             <div className="navlinks">
               <a href="/listings" style={{ textDecoration: "none" }}>

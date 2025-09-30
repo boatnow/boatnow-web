@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250" role="img" aria-labelledby="bnTitle bnDesc">
+  <title id="bnTitle">BookNaav</title>
+  <desc id="bnDesc">Visionary gradient wave-arrow logo for BookNaav with bold wordmark and tagline.</desc>
+  
+  <defs>
+    <!-- Water gradient -->
+    <linearGradient id="waterFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078FF"/>
+      <stop offset="50%" stop-color="#00C4FF"/>
+      <stop offset="100%" stop-color="#00E5A0"/>
+    </linearGradient>
+    <!-- Accent gradient (arrow tip + Naav) -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#FFC107"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wave + Arrow symbol -->
+  <g transform="translate(20,40)">
+    <path d="M20 80 C100 20, 220 20, 300 80 
+             S500 140, 560 60" 
+          fill="none" stroke="url(#waterFlow)" stroke-width="30" stroke-linecap="round"/>
+    <polygon points="540,40 590,60 540,80" fill="url(#accent)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="40" y="180" font-family="Poppins, Inter, Arial, sans-serif" 
+        font-weight="800" font-size="64" fill="url(#waterFlow)">
+    Book<tspan fill="url(#accent)">Naav</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="45" y="215" font-family="Poppins, Inter, Arial, sans-serif"
+        font-weight="500" font-size="20" fill="#444">
+    Expanding Waterways, Empowering Everyone
+  </text>
+</svg>
+
+
