@@ -12,15 +12,15 @@ export default function ListingDetails({ params }) {
   if (!boat) return <div style={{ padding: 24 }} className="container">Not found</div>;
 
   return (
-    <section style={{ padding: "32px 24px" }}>
+    <section className="section">
       <div className="container" style={{ display: 'grid', gap: 24, gridTemplateColumns: '1fr', maxWidth: 900 }}>
-        <div style={{ aspectRatio: '16/9', background: '#f3f4f6', borderRadius: 12 }} />
+        <div className="card-media" style={{ borderRadius: 12 }} />
         <div>
           <h1 style={{ fontSize: 28, fontWeight: 600 }}>{boat.name}</h1>
-          <p style={{ color: '#6b7280' }}>{boat.location} · ₹{boat.price}/hour</p>
+          <p className="muted">{boat.location} · ₹{boat.price}/hour</p>
           <p style={{ marginTop: 12 }}>{boat.description}</p>
           <div style={{ marginTop: 16 }}>
-            <Link href={`/booking?boatId=${boat.id}`} style={{ background: '#000', color: '#fff', padding: '10px 14px', borderRadius: 8 }}>Book now</Link>
+            <Link href={`/booking?boatId=${boat.id}`} className="btn btn-primary">Book now</Link>
           </div>
         </div>
       </div>

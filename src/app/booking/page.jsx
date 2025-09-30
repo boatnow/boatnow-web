@@ -40,10 +40,10 @@ function BookingContent() {
   }
 
   return (
-    <section style={{ padding: "32px 24px" }}>
+    <section className="section">
       <div className="container" style={{ maxWidth: 640 }}>
         <h1 style={{ fontSize: 28, fontWeight: 600 }}>Booking</h1>
-        <p style={{ marginTop: 6 }}>{boat.name} · ₹{boat.price}/hour</p>
+        <p className="muted" style={{ marginTop: 6 }}>{boat.name} · ₹{boat.price}/hour</p>
         <form onSubmit={onSubmit} style={{ marginTop: 16, display: 'grid', gap: 12 }}>
           <label style={{ display: 'grid', gap: 6 }}>
             <span style={{ fontSize: 14 }}>Date</span>
@@ -61,7 +61,7 @@ function BookingContent() {
             <span style={{ fontSize: 14 }}>Email</span>
             <input type="email" value={email} onChange={e => setEmail(e.target.value)} style={{ padding: '10px 12px', border: '1px solid #e5e5e5', borderRadius: 8 }} />
           </label>
-          <button type="submit" style={{ marginTop: 8, background: '#000', color: '#fff', padding: '10px 14px', borderRadius: 8 }}>Confirm booking</button>
+          <button type="submit" className="btn btn-primary" style={{ marginTop: 8 }}>Confirm booking</button>
           {confirmed && <p style={{ color: '#16a34a', fontSize: 14 }}>Booking confirmed! Redirecting…</p>}
         </form>
       </div>

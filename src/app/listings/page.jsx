@@ -7,16 +7,16 @@ const boats = [
 
 export default function ListingsPage() {
   return (
-    <section style={{ padding: "32px 24px" }}>
+    <section className="section">
       <div className="container">
         <h1 style={{ fontSize: 28, fontWeight: 600 }}>All listings</h1>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 24, marginTop: 24 }}>
+        <div className="grid grid-3" style={{ marginTop: 20 }}>
           {boats.map((b) => (
-            <a key={b.id} href={`/listings/${b.id}`} style={{ display: 'block', border: '1px solid #e5e5e5', borderRadius: 12, background: '#fff' }}>
-              <div style={{ aspectRatio: '16/9', background: '#f3f4f6', borderTopLeftRadius: 12, borderTopRightRadius: 12 }} />
-              <div style={{ padding: 16 }}>
+            <a key={b.id} className="card" href={`/listings/${b.id}`}>
+              <div className="card-media" />
+              <div className="card-body">
                 <h3 style={{ margin: 0, fontWeight: 600 }}>{b.name}</h3>
-                <p style={{ margin: '6px 0 0', fontSize: 14, color: '#6b7280' }}>{b.location} · ₹{b.price}/hour</p>
+                <p className="muted" style={{ margin: '6px 0 0', fontSize: 14 }}>{b.location} · ₹{b.price}/hour</p>
               </div>
             </a>
           ))}

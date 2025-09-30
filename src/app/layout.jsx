@@ -40,28 +40,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen flex flex-col">
-          <nav
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              padding: "12px 24px",
-              borderBottom: "1px solid #e5e5e5",
-              background: "rgba(255,255,255,0.8)",
-              backdropFilter: "saturate(180%) blur(8px)",
-            }}
-          >
+          <nav className="navbar">
             <a href="/" style={{ fontSize: 20, fontWeight: 600 }}>
               BoatNow
             </a>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 16,
-                fontSize: 14,
-              }}
-            >
+            <div className="navlinks">
               <a href="/listings" style={{ textDecoration: "none" }}>
                 Listings
               </a>
